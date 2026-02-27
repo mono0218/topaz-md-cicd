@@ -1,0 +1,20 @@
+name: 'Topaz Deploy'
+description: '指定した Markdown ファイルの内容で Topaz プロジェクトの body を更新する'
+
+inputs:
+  firebase-api-key:
+    description: 'Firebase API Key'
+    required: true
+  firebase-refresh-token:
+    description: 'Firebase Refresh Token'
+    required: true
+  topaz-project-id:
+    description: 'Topaz Project ID'
+    required: true
+  content-file-path:
+    description: 'body に反映する Markdown ファイルのパス'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
